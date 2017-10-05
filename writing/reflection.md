@@ -8,7 +8,7 @@ substrings to start or end at and what numbers I had to type to achieve those
 positions. Once I completed the character-adding phase, though, it made the
 following phases much easier since I had a feel for the pattern. As far as
 explaining my 'strategy,' I guess I just tried to attack each phase one step at
-a time and got creative with my random generators.
+a time and tried to get creative with my random generators.
 
 One limitation of this code is that, at present, it'll only work with
 four-character DNA strings. In the future, I'd like to figure out how to adapt
