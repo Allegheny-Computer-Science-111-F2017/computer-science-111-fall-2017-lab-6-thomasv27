@@ -40,6 +40,7 @@ public class ManipulateDna {
     }
     // Step One: Read in and display the chosen DNA string
     String dna = scanner.nextLine();
+    final int dnaLength = dna.length();
     System.out.println("Okay, I'll manipulate " + dna.toUpperCase() + ".");
     // Step Two: Compute the complement of the DNA String
     String dnaComp = dna.replace('a','T').replace('t','A').replace('c','G')
@@ -47,25 +48,25 @@ public class ManipulateDna {
     System.out.println("The complement of " + dna.toUpperCase() + " is " + dnaComp + ".");
     // Step Three: Insert a randomly chosen DNA letter into the DNA String
     Random rand = new Random();
-    int addPosition = rand.nextInt(3) + 1;
-    int addLetter = rand.nextInt(3) + 1;
+    int addPosition = rand.nextInt(dnaLength - 1) + 1;
+    int addLetter = rand.nextInt(dnaLength - 1) + 1;
     char randLetter = dna.toUpperCase().charAt(addLetter);
     String dnaAdd = dna.substring(0,addPosition) + dna.charAt(addLetter) 
-        + dna.substring(addPosition,4);
+        + dna.substring(addPosition,dnaLength);
     System.out.println("I'm adding a(n) " + randLetter 
         + " at position " + addPosition + ". That makes " + dnaAdd.toUpperCase() + ".");
     // Step Four: Delete a DNA letter from a randomly chosen position in the DNA string
-    int delPosition = rand.nextInt(3) + 1;
+    int delPosition = rand.nextInt(dnaLength - 1) + 1;
     char delLetter = dna.toUpperCase().charAt(delPosition);
-    String dnaDel = dna.substring(0,delPosition) + dna.substring(delPosition + 1,4);
+    String dnaDel = dna.substring(0,delPosition) + dna.substring(delPosition + 1,dnaLength);
     System.out.println("I'm subtracting the letter in position " + delPosition 
         + ". That makes " + dnaDel.toUpperCase() + ".");
     // Step Five: Change a random position in the DNA String to a randomly chosen DNA letter
-    int changePosition = rand.nextInt(3) + 1;
-    int changeLetter = rand.nextInt(3) + 1;
+    int changePosition = rand.nextInt(dnaLength - 1) + 1;
+    int changeLetter = rand.nextInt(dnaLength - 1) + 1;
     String dnaChange = dna.toUpperCase().substring(0,changePosition) 
         + dna.toUpperCase().charAt(changeLetter) 
-        + dna.toUpperCase().substring(changePosition + 1,4);
+        + dna.toUpperCase().substring(changePosition + 1,dnaLength);
     System.out.println("I'm randomly replacing the letter in position " + changePosition 
         + " with a " + dna.toUpperCase().charAt(changeLetter) 
         + ". That makes " + dnaChange + ".");
