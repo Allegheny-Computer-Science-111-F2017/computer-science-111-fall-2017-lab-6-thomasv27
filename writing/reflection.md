@@ -14,3 +14,6 @@ One limitation of this code is that, at present, it'll only work with
 four-character DNA strings. In the future, I'd like to figure out how to adapt
 it for DNA strings of any length. (I might already know how to do that, but I'm
 not so sure. If I figure it out, I'll recommit!)
+
+UPDATE: I have now upgraded the program so it can process DNA strings of any
+length. Neat-o.
