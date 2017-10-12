@@ -68,7 +68,7 @@ public class ManipulateDna {
         + dna.toUpperCase().charAt(changeLetter) 
         + dna.toUpperCase().substring(changePosition + 1,dnaLength);
     System.out.println("I'm randomly replacing the letter in position " + changePosition 
-        + " with a " + dna.toUpperCase().charAt(changeLetter) 
+        + " with a(n) " + dna.toUpperCase().charAt(changeLetter) 
         + ". That makes " + dnaChange + ".");
     // Step Six: Display a final thankyou message
     System.out.println("Thanks for using the ManipulateDna program!");
